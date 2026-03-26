@@ -2,7 +2,7 @@ import { requestLogger } from './middleware/logger.middleware.js';
 import express, { Application } from 'express';
 import cors from 'cors';
 
-import healthRoute from './routes/health.route.js';
+import appRouter from './index.router.js';
 
 const app: Application = express();
 
@@ -12,6 +12,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(requestLogger);
 
-app.use('/api', healthRoute);
+app.use('/api', appRouter);
 
 export default app;
