@@ -31,13 +31,18 @@ export const googleCallback = async (req: Request, res: Response) => {
     name: payload.name,
     picture: payload.picture,
   };
-    
+
   if (!userData.email || !userData.name) {
     throw new Error('Missing required fields');
   }
 
-  const user = await prisma.user.create({
-    data: {
+  const user = await prisma.user.upsert({
+    where: { email: userData.email },
+    update: {
+      name: userData.name,
+      picture: userData.picture,
+    },
+    create: {
       email: userData.email,
       name: userData.name,
       picture: userData.picture,
@@ -57,5 +62,5 @@ export const googleCallback = async (req: Request, res: Response) => {
     maxAge: 2 * 60 * 60 * 1000,
   });
 
-  res.redirect(`${env.FRONTEND_URL}/dashboard`);
+  res.redirect(`${env.FRONTEND_URL}/chat`);
 };

@@ -1,17 +1,31 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import { Scale } from "lucide-react"
 import React from "react"
 
 export default function LoginPage() {
+  function handleGoogleLogin() {
+    console.log("Redirecting to Google OAuth...")
+    window.location.href = `${process.env.NEXT_PUBLIC_API_URL}/api/auth/google`
+  }
+
   return (
     <section className="flex min-h-screen w-full flex-col items-center justify-center">
       <div className="flex flex-col items-center justify-center gap-1.5">
-        <Scale size={50} strokeWidth={1.3} className="text-primary"/>
+        <Scale size={50} strokeWidth={1.3} className="text-primary" />
         <h2 className="font-heading text-2xl tracking-tight">legalease</h2>
       </div>
 
       <div className="flex flex-col items-center justify-center">
-        <Button variant={"link"} className="mt-6 text-foreground" size={"lg"}>
+        <Button
+          variant={"default"}
+          className="mt-6 text-foreground"
+          size={"lg"}
+          onClick={() => {
+            console.log("Google login button clicked")
+            handleGoogleLogin()
+          }}
+        >
           <svg
             width="800px"
             height="800px"
@@ -40,7 +54,7 @@ export default function LoginPage() {
         </Button>
       </div>
 
-      <p className="absolute inset-0 bottom-4 flex items-end justify-center text-muted-foreground">
+      <p className="absolute right-0 bottom-4 left-0 flex items-end justify-center text-muted-foreground">
         By clicking continue, you agree to our Terms of Service and Privacy
         Policy.
       </p>

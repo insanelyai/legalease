@@ -1,4 +1,4 @@
-import { requestLogger } from './middleware/logger.middleware.js';
+import { requestLogger } from './logger.middleware.js';
 import express, { Application } from 'express';
 import cors from 'cors';
 
