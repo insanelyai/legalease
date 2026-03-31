@@ -1,0 +1,19 @@
+
+# PDF extraction
+pdfplumber>=0.11.0
+pypdf>=4.0.0
+ 
+# OCR (optional, for scanned PDFs)
+# pytesseract>=0.3.10
+# pdf2image>=1.17.0
+ 
+# Embeddings
+sentence-transformers>=3.0.0
+torch>=2.0.0
+ 
+# Database
+psycopg2-binary>=2.9.0
+ 
+# Utilities
+python-dotenv>=1.0.0
+ 
