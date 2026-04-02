@@ -7,18 +7,23 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { LEGAL_AREA } from "@/types"
 
-export default function LeagalAreaSection() {
+export default function LeagalAreaSection({
+  onValueChange,
+}: {
+  onValueChange: (value: LEGAL_AREA) => void
+}) {
   return (
-    <Select>
+    <Select onValueChange={onValueChange}>
       <SelectTrigger className="w-45">
         <SelectValue placeholder="Select Legal Area" />
       </SelectTrigger>
       <SelectContent position="popper" align="center">
         <SelectGroup>
-          <SelectItem value="consumer">Consumer Protection</SelectItem>
-          <SelectItem value="labour">Labour & Employment</SelectItem>
-          <SelectItem value="family">Family Law</SelectItem>
+          <SelectItem value="CP">Consumer Protection</SelectItem>
+          <SelectItem value="LE">Labour & Employment</SelectItem>
+          <SelectItem value="FW">Family Law</SelectItem>
         </SelectGroup>
       </SelectContent>
     </Select>
