@@ -1,8 +1,11 @@
 node_modules
 
 .env
-
+venv
 /logs/*
 /generated/prisma
 
 /prisma/migrations
+
+/bge-m3
+
