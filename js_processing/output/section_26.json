@@ -1,0 +1,32 @@
+[
+  {
+    "chunk_type": "main_rule",
+    "text": "Nothing, which is not intended to cause death, is an offence by reason of any harm which it may cause, or be intended by the doer to cause, or be known by the doer to be likely to cause, to any person for whose benefit it is done in good faith, and who has given a consent, whether express or implied, to suffer that harm, or to take the risk of that harm.",
+    "clause": null,
+    "cross_refs": [],
+    "section_num": "26",
+    "section_title": "Nothing, which is not intended to cause death, is an offence by reason of any harm which it may cause, or be intended by the doer to cause, or be known by the doer to be likely to cause, to any person for whose benefit it is done in good faith, and who has given a consent, whether express or implied, to suffer that harm, or to take the risk of that harm.",
+    "chunk_index": 0,
+    "word_count": 73
+  },
+  {
+    "chunk_type": "explanation",
+    "text": "This rule clarifies that an act is not considered an offence if it does not intend to cause death and the harm caused is within the scope of consent given by a person for whose benefit the act was done, either express or implied.",
+    "clause": null,
+    "cross_refs": [],
+    "section_num": "26",
+    "section_title": "Nothing, which is not intended to cause death, is an offence by reason of any harm which it may cause, or be intended by the doer to cause, or be known by the doer to be likely to cause, to any person for whose benefit it is done in good faith, and who has given a consent, whether express or implied, to suffer that harm, or to take the risk of that harm.",
+    "chunk_index": 1,
+    "word_count": 44
+  },
+  {
+    "chunk_type": "illustration",
+    "text": "A surgeon performs an operation on Z with Z's consent knowing that it is likely to cause death but not intending to cause Z’s death. The act does not constitute an offence under this rule.",
+    "clause": null,
+    "cross_refs": [],
+    "section_num": "26",
+    "section_title": "Nothing, which is not intended to cause death, is an offence by reason of any harm which it may cause, or be intended by the doer to cause, or be known by the doer to be likely to cause, to any person for whose benefit it is done in good faith, and who has given a consent, whether express or implied, to suffer that harm, or to take the risk of that harm.",
+    "chunk_index": 2,
+    "word_count": 35
+  }
+]

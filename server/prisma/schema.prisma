@@ -43,14 +43,21 @@ model Messages {
 
 model legal_chunks {
   id                    String   @id @default(uuid())
+
+  // RAW + CLEAN TEXT
   text                  String
+  clean_text            String?   // 🔥 NEW
+
   chunk_type            String?
   parent_id             String?
+
   act_name              String?
   act_year              Int?
   law_type              String?
+
   chapter_num           String?
   chapter_title         String?
+
   section_num           String?
   section_title         String?
 
@@ -59,13 +66,22 @@ model legal_chunks {
   is_definition_section Boolean? @default(false)
 
   cross_refs            String[]
+  internal_refs         String[]   // 🔥 NEW
+  external_refs         String[]   // 🔥 NEW
+
   source_file           String?
   page_range            Int[]
 
   chunk_index           Int?
   word_count            Int?
 
-  embedding             Unsupported("vector")
+  // 🔥 EMBEDDINGS (bge-m3)
+  dense_embedding       Unsupported("vector(1024)")
+  sparse_embedding      Json        // lexical weights
+
+  // 🔥 OPTIONAL BOOST
+  summary               String?     // LLM generated
+
   fts                   Unsupported("tsvector")
 
   ingested_at           DateTime? @default(now()) @db.Timestamptz(6)
